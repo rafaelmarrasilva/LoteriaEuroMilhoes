@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace EuroMilhoes
+namespace EuroMilhoes.WebApi
 {
     public class Startup
     {
@@ -30,7 +30,7 @@ namespace EuroMilhoes
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "EuroMilhoes", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "EuroMilhoes.WebApi", Version = "v1" });
             });
         }
 
@@ -41,14 +41,14 @@ namespace EuroMilhoes
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "EuroMilhoes v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "EuroMilhoes.WebApi v1"));
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

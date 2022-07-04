@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace EuroMilhoes.Controllers
+namespace EuroMilhoes.WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]

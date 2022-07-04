@@ -1,6 +1,6 @@
 using System;
 
-namespace EuroMilhoes
+namespace EuroMilhoes.WebApi
 {
     public class WeatherForecast
     {
